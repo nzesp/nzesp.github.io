@@ -1,0 +1,242 @@
+@charset "UTF-8";
+/*
+ Print stylesheet.
+*/
+/* base colours */
+/* link colours */
+/*------------------------------------*\
+    #MIXINS
+\*------------------------------------*/
+.print-only {
+  display: block; }
+  .print-only.i-nzta-logo-coloured {
+    display: inline-block; }
+
+/* Page break support */
+img, .code-snippet {
+  -webkit-column-break-inside: avoid;
+  /* webkit since v.4.0 */
+  page-break-inside: avoid;
+  /* Firefox since v.19 BUGGY */
+  break-inside: avoid;
+  /* IE10+, Opera 11.1—12.1 */
+  -moz-break-inside: avoid; }
+
+.page-break-before {
+  display: block;
+  page-break-before: always; }
+
+.grid > div {
+  display: block; }
+
+.grid > .medium-half {
+  display: inline-block;
+  width: 48%; }
+
+/* Remove non-content elements */
+.no-print, .hide-print, .access, .action, #SilverStripeNavigator, #SilverStripeNavigatorMessage, .action-link-wrapper, .section-nav, .content-navigation, .title-highlight:after, .content-navigation__top-link {
+  display: none !important; }
+
+.title-highlight:after {
+  display: none; }
+
+.print-table-small th, .print-table-small td {
+  font-size: 0.7em !important; }
+
+.anchor-links {
+  padding-top: 16px;
+  padding-bottom: 16px; }
+  .anchor-links li {
+    padding-left: 16px;
+    display: inline; }
+
+.breadcrumb {
+  display: none; }
+
+.global-nav.theme--strong, .theme--dark, .traffic-info__header {
+  background-color: #fff !important;
+  color: #000 !important; }
+
+.grid > * {
+  display: block; }
+
+.header {
+  background-color: #fff; }
+  .header .header__title {
+    padding-top: 0px;
+    padding-bottom: 0px; }
+    .header .header__title .layout {
+      padding-left: 0; }
+    .header .header__title .wrapper {
+      margin-left: 0; }
+  .header h1 {
+    margin: 1rem 0;
+    color: #000;
+    font-size: 2rem; }
+
+.i-nzta-logo {
+  display: none; }
+
+.i-nzta-logo-coloured {
+  background: none !important;
+  background-image: none !important;
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+.i-nzgovt {
+  background: transparent;
+  background-image: none !important; }
+
+.section {
+  padding-top: 0px; }
+
+.section div.subnav div {
+  display: inline-block; }
+
+.subnav .link-complex .link-complex__link {
+  padding-top: 16px; }
+.subnav .breakline--hatched {
+  padding-top: 0px; }
+.subnav .subnav__children {
+  margin-bottom: 0px; }
+  .subnav .subnav__children .subnav__child {
+    display: inline-block; }
+
+.theme--neutral {
+  background-color: #fff; }
+
+.breakline--hatched:before, .subnav__nav:before, .hatched-line:before, .level-1 .traffic-info__header:after, .i-bg-hatched {
+  background-image: none !important; }
+
+div {
+  overflow: visible; }
+
+.typography a[href^=http]:after, p.print-only a[href]:after {
+  content: " (" attr(href) ") ";
+  padding-left: 5px; }
+
+a.external::after {
+  background-image: none;
+  content: "";
+  height: 9px;
+  margin-top: 0.3125rem;
+  position: static;
+  width: 9px; }
+
+/*
+ * Remove styles so that content can be printed
+ */
+.content-overflow {
+  overflow-x: visible;
+  height: auto;
+  display: block;
+  border: none; }
+
+/* remove glossary popups for print */
+.mfp-bg, .mfp-wrap, .mfp-container, .glossary-popup {
+  display: none !important; }
+
+.typography a.glossary-link {
+  border-bottom: none; }
+
+.glossary-popup {
+  display: none; }
+
+/* Project section page :Custom layout for print
+The reason of this overriding is that because print parser does not tell
+the CSS3 property of box-sizing: border-box; */
+.grid--large--table #introduction, .grid--large--table .large-7.projectupdates {
+  float: left; }
+
+.section-nav {
+  background: transparent !important; }
+  .section-nav li a {
+    background: transparent none repeat scroll 0 0 !important; }
+
+.grid--large--table #introduction {
+  width: 25%; }
+
+.project-purpose {
+  clear: both;
+  display: inline-block; }
+
+#project-updates .col {
+  width: 100%; }
+
+/* project map page printable section */
+.section--map {
+  position: absolute !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0; }
+  .section--map > * {
+    width: 1600px !important;
+    height: 900px !important; }
+
+.layout--nudge {
+  margin-top: 0; }
+
+.project-list .grid--list-view div.col {
+  display: inline-block; }
+
+.theme--dark .title-highlight {
+  color: #000;
+  background-color: #fff; }
+
+.theme--dark .landing-overview h1, .theme--dark .landing-overview h2, .theme--dark .landing-overview h3, .theme--dark .landing-overview h4, .theme--dark .landing-overview h5, .theme--dark .landing-overview h6, .landing-overview .theme--dark h1, .landing-overview .theme--dark h2, .landing-overview .theme--dark h3, .landing-overview .theme--dark h4, .landing-overview .theme--dark h5, .landing-overview .theme--dark h6 {
+  color: #000;
+  background-color: #fff; }
+
+.theme--confirmation, .theme--error, .theme--paper {
+  box-shadow: none; }
+
+.grid--isotope-container-landing {
+  position: relative;
+  margin-top: 0; }
+
+/* CCOS section print styles */
+.page--ccos .ccos__story {
+  width: 100%;
+  height: auto !important;
+  background: #fff !important; }
+  .page--ccos .ccos__story * {
+    color: #000 !important; }
+  .page--ccos .ccos__story img {
+    display: none; }
+  .page--ccos .ccos__story a.ccos__story__read-more:after {
+    content: " (" attr(href) ")"; }
+
+.toolkit {
+  display: none; }
+
+.partners .slick-arrow {
+  display: none !important; }
+.partners .slick-list {
+  width: 100%;
+  display: inline; }
+  .partners .slick-list .slick-track {
+    position: static;
+    overflow: visible;
+    left: 0;
+    width: 100% !important; }
+    .partners .slick-list .slick-track li {
+      margin: 20px 0; }
+      .partners .slick-list .slick-track li img {
+        width: 50%; }
+      .partners .slick-list .slick-track li.slick-cloned {
+        display: none; }
+
+.ccos * {
+  color: #000; }
+.ccos .col.large-two-thirds {
+  width: 100% !important; }
+.ccos .ccos-sidebar {
+  display: none; }
+.ccos .ccos-graphic .ccos-graphic__caption p:before {
+  height: 0px !important;
+  display: none !important;
+  width: 0px !important;
+  background: #fff !important; }
