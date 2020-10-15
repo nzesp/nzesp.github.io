@@ -3951,8 +3951,6 @@ input, select, textarea {
 			}
 
 			#banner > .inner .icon {
-				border-radius: 100%;
-				border: 1px solid #ffffff;
 				color: #ffffff;
 				display: block;
 				font-size: 3.5rem;
@@ -4027,7 +4025,7 @@ input, select, textarea {
 						margin: 0 auto 3rem auto;
 						position: relative;
 						width: 6rem;
-						z-index: 10011;
+						z-index: 2;
 					}
 
 		}
