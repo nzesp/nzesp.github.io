@@ -180,8 +180,8 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-family: "Fjalla One", sans-serif;
-		font-weight: 400;
+		font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+		font-weight: 600;
 		line-height: 1.5;
 		margin: 0 0 1.5rem 0;
 		text-transform: uppercase;
@@ -1891,9 +1891,9 @@ input, select, textarea {
 		border-radius: 4px;
 		cursor: pointer;
 		display: inline-block;
-		font-family: "Fjalla One", sans-serif;
+		font-family: "Source Sans Pro", Arial, Helvetica, sans-serif
 		font-size: 1rem;
-		font-weight: 400;
+		font-weight: 600;
 		height: 3.25rem;
 		letter-spacing: 0.1rem;
 		line-height: 3.375rem;
@@ -2398,6 +2398,8 @@ input, select, textarea {
 
 		.image img {
 			display: block;
+			max-width: 100%;
+			max-height: 100%;
 		}
 
 		.image.left, .image.right {
@@ -2649,7 +2651,7 @@ input, select, textarea {
 				box-shadow: inset 0 0 0 1px #4468ca;
 				color: #4468ca;
 				display: block;
-				font-family: "Fjalla One", sans-serif;
+				font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
 				font-size: 1.25rem;
 				font-weight: 400;
 				height: 2.75rem;
@@ -3022,10 +3024,14 @@ input, select, textarea {
 				border: 1px solid #4468ca;
 				padding: 0.75rem;
 				margin-bottom: 2rem;
+
 			}
 
 				.profiles .profile .image img {
 					border-radius: 100%;
+					object-fit: cover;
+					width: 10em;
+					height: 10em;
 				}
 
 		@media screen and (min-width: 1281px) {
@@ -3394,8 +3400,8 @@ input, select, textarea {
 
 		#header > .logo {
 			color: #ffffff;
-			font-family: "Fjalla One", sans-serif;
-			font-weight: 400;
+			font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+			font-weight: 600;
 			letter-spacing: 0.1rem;
 			padding: 0 1.25rem;
 			text-decoration: none;
@@ -3410,8 +3416,8 @@ input, select, textarea {
 		#header > nav > a {
 			color: #ffffff;
 			display: inline-block;
-			font-family: "Fjalla One", sans-serif;
-			font-weight: 400;
+			font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+			font-weight: 600;
 			margin-top: 0.125rem;
 			padding: 0 0.75rem;
 			position: relative;
